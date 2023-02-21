@@ -1,9 +1,14 @@
 <template>
     <TheHeader />
-  <div class="container-fluid">
+  <div class="container-fluid mt-3">
     <div class="row">
       <div class="col-sm-3 d-none d-sm-flex">
-        Side bar
+        <a-list bordered :data-source="data">
+          <template #header>
+            <div>Header</div>
+          </template>
+
+        </a-list>
       </div>
       <div class="col-12 col-sm-9">
         <router-view></router-view>
